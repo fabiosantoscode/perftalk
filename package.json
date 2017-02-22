@@ -1,5 +1,5 @@
 {
-  "name": "reveal.js",
+  "name": "perftalk",
   "version": "3.2.0",
   "description": "The HTML Presentation Framework",
   "homepage": "http://lab.hakim.se/reveal-js",
@@ -7,7 +7,8 @@
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
-    "start": "grunt serve"
+    "start": "ecstatic . --port 3000",
+    "build": "bash index.html.template > index.html"
   },
   "author": {
     "name": "Hakim El Hattab",
@@ -22,10 +23,12 @@
     "node": "~4.1.1"
   },
   "dependencies": {
-    "underscore": "~1.8.3",
+    "ecstatic": "^2.1.0",
     "express": "~4.13.3",
+    "markdown": "^0.5.0",
     "mustache": "~2.1.3",
-    "socket.io": "~1.3.7"
+    "socket.io": "~1.3.7",
+    "underscore": "~1.8.3"
   },
   "devDependencies": {
     "grunt-contrib-qunit": "~0.7.0",
@@ -40,6 +43,5 @@
     "grunt": "~0.4.5",
     "node-sass": "~3.3.3"
   },
-  
   "license": "MIT"
 }
